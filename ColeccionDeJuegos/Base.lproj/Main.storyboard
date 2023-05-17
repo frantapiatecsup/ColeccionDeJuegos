@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="68E-Xk-uVi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c2Y-IC-pa8">
                             <connections>
-                                <segue destination="yyO-Fk-l7a" kind="show" id="lz5-1y-7Vf"/>
+                                <segue destination="yyO-Fk-l7a" kind="show" identifier="juegoSegue" id="lz5-1y-7Vf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,17 +75,27 @@
                                     <action selector="agregarTapped:" destination="yyO-Fk-l7a" eventType="touchUpInside" id="4xQ-7Q-oZQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-a2-pfU">
+                                <rect key="frame" x="169" y="402" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="yyO-Fk-l7a" eventType="touchUpInside" id="G40-m2-acD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xfd-R4-NGQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jri-Te-Oxq" firstAttribute="top" secondItem="Xfd-R4-NGQ" secondAttribute="top" constant="32" id="C8f-Ox-uqE"/>
                             <constraint firstItem="58B-UQ-y05" firstAttribute="top" secondItem="jri-Te-Oxq" secondAttribute="bottom" constant="20" id="LnQ-l2-AmX"/>
+                            <constraint firstItem="sgb-a2-pfU" firstAttribute="centerX" secondItem="5TM-Nf-lNv" secondAttribute="centerX" id="Wxl-Gs-GeC"/>
                             <constraint firstItem="Vut-hg-geR" firstAttribute="top" secondItem="58B-UQ-y05" secondAttribute="bottom" constant="20" id="YYM-hH-1sN"/>
                             <constraint firstItem="jri-Te-Oxq" firstAttribute="centerX" secondItem="5TM-Nf-lNv" secondAttribute="centerX" id="ZUe-Xp-T2u"/>
                             <constraint firstItem="58B-UQ-y05" firstAttribute="centerX" secondItem="5TM-Nf-lNv" secondAttribute="centerX" id="a5V-P3-SfM"/>
                             <constraint firstItem="58B-UQ-y05" firstAttribute="leading" secondItem="Xfd-R4-NGQ" secondAttribute="leading" constant="60" id="bO6-cX-Och"/>
                             <constraint firstItem="Xfd-R4-NGQ" firstAttribute="trailing" secondItem="58B-UQ-y05" secondAttribute="trailing" constant="60" id="fC1-mg-PYE"/>
+                            <constraint firstItem="sgb-a2-pfU" firstAttribute="top" secondItem="Vut-hg-geR" secondAttribute="bottom" constant="27" id="qNl-24-Xp0"/>
                             <constraint firstItem="Vut-hg-geR" firstAttribute="centerX" secondItem="5TM-Nf-lNv" secondAttribute="centerX" id="seV-BJ-TEQ"/>
                         </constraints>
                     </view>
@@ -104,6 +114,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="Vut-hg-geR" id="Wej-4a-TTy"/>
+                        <outlet property="eliminarBoton" destination="sgb-a2-pfU" id="VU2-BN-2Nu"/>
                         <outlet property="imageView" destination="jri-Te-Oxq" id="tUm-7t-Ib9"/>
                         <outlet property="titutloTextField" destination="58B-UQ-y05" id="NHi-U4-aaT"/>
                     </connections>
